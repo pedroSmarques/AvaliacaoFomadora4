@@ -1,0 +1,300 @@
+/* Fundo geral */
+body {
+    margin: 0;
+    padding: 0;
+    background: #111;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+}
+
+/* Topo */
+.topo {
+    background: #cc0000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topo h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.btn-sair {
+    color: #fff;
+    background: #000;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-sair:hover {
+    background: #333;
+}
+
+/* Conteúdo principal */
+.container {
+    padding: 20px;
+}
+
+.painel h2 {
+    margin-bottom: 15px;
+}
+
+/* Lista de pedidos */
+.lista-pedidos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pedido {
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #cc0000;
+}
+
+.pedido h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.pedido p {
+    margin: 3px 0;
+}
+
+/* Botões de ação */
+.btn-acao,
+.btn-status {
+    padding: 8px 14px;
+    margin-top: 10px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-aceitar {
+    background: #00b32a;
+    color: #fff;
+}
+
+.btn-aceitar:hover {
+    background: #00d235;
+}
+
+.btn-recusar {
+    background: #b30000;
+    color: #fff;
+}
+
+.btn-recusar:hover {
+    background: #e60000;
+}
+
+.btn-status {
+    background: #cc0000;
+    color: white;
+}
+
+.btn-status:hover {
+    background: #ff1a1a;
+}
+
+/* Campo de token embutido (se ainda usar) */
+.token-input {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* Modal de token */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-conteudo {
+    background: #111;
+    border: 2px solid #cc0000;
+    padding: 20px 25px;
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+}
+
+.modal-conteudo h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.campo-token {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background: #222;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.campo-token:focus {
+    outline: none;
+    border-color: #cc0000;
+}
+
+.erro-modal {
+    display: block;
+    margin-top: 8px;
+    color: #ff6666;
+    font-size: 13px;
+    min-height: 16px;
+}
+
+/* Botões do modal */
+.botoes-modal {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.btn-modal {
+    flex: 1;
+    margin: 0 5px;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-cancelar {
+    background: #333;
+    color: #fff;
+}
+
+.btn-cancelar:hover {
+    background: #555;
+}
+
+.btn-confirmar {
+    background: #cc0000;
+    color: #fff;
+}
+
+.btn-confirmar:hover {
+    background: #ff1a1a;
+}
+/* ==========================================
+   MODAL PERSONALIZADO DO TOKEN (ENTREGADOR)
+   ========================================== */
+
+.overlay-token {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.overlay-token.hidden-token {
+    display: none;
+}
+
+.box-token {
+    background: #111;
+    border: 2px solid #cc0000;
+    padding: 20px 25px;
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+    color: #fff;
+}
+
+.box-token h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.box-token p {
+    margin-bottom: 10px;
+}
+
+.campo-token {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background: #222;
+    color: #fff;
+}
+
+.campo-token:focus {
+    outline: none;
+    border-color: #cc0000;
+}
+
+.erro-token {
+    display: block;
+    margin-top: 8px;
+    color: #ff6666;
+    font-size: 13px;
+    min-height: 16px;
+}
+
+.botoes-token {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.btn-token {
+    flex: 1;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-cancelar {
+    background: #333;
+    color: #fff;
+}
+
+.btn-cancelar:hover {
+    background: #555;
+}
+
+.btn-confirmar {
+    background: #cc0000;
+    color: #fff;
+}
+
+.btn-confirmar:hover {
+    background: #ff1a1a;
+}

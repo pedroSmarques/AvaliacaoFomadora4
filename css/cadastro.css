@@ -1,0 +1,78 @@
+
+body {
+    background: radial-gradient(circle at top, #b30000, #000);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.container-cadastro {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.card-cadastro {
+    background: #111;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #b30000;
+    box-shadow: 0 10px 25px rgba(0,0,0,.7);
+}
+
+.card-cadastro h1 {
+    text-align: center;
+}
+
+.grupo-input {
+    margin-top: 14px;
+}
+
+label {
+    font-size: 0.83rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 6px;
+}
+
+input:focus, select:focus {
+    border-color: #e60000;
+}
+
+.divisor {
+    margin: 18px 0;
+    border: 0;
+    border-top: 1px solid #b30000;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn-vermelho {
+    width: 100%;
+    margin-top: 18px;
+    padding: 10px;
+    background: #e60000;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-vermelho:hover {
+    background: #ff1a1a;
+}
+
+.erro-campo {
+    color: #ff9b9b;
+    font-size: 0.75rem;
+}
