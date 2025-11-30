@@ -31,7 +31,7 @@ $nome = $_SESSION['usuario']['nome'];
         <a class="btn-sair" href="php/logout.php">Sair</a>
     </header>
 
-    <!-- 🔥 Disponibiliza o ID do usuário para o JavaScript -->
+    <!--  Disponibiliza o ID do usuário para o JavaScript -->
     <script>
         const usuarioID = <?php echo json_encode($id); ?>;
     </script>
