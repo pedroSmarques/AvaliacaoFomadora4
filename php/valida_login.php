@@ -47,10 +47,10 @@ $_SESSION['usuario'] = [
     'role' => $usuario['role']
 ];
 
-/* 🔥 AQUI REGISTRA O LOG DE ACESSO */
+/*  AQUI REGISTRA O LOG DE ACESSO */
 require_once __DIR__ . "/admin/logs/registrar_log.php";
 
-/* 🔥 Agora sim redireciona */
+/*  Agora redireciona */
 if ($usuario['role'] === 'admin') {
     header("Location: ../admin.php");
     exit;
