@@ -2,7 +2,7 @@
 require_once "../php/conexao.php";
 
 // RECEBER DADOS DO FORMULÁRIO --------------------------
-$tipo = $_POST['tipo_usuario'] ?? 'cliente'; // <-- nome correto vindo do SELECT
+$tipo = $_POST['tipo_usuario'] ?? 'cliente'; 
 
 $nome = $_POST['nome'];
 $cpf = preg_replace('/\D/', '', $_POST['cpf']);
@@ -53,7 +53,7 @@ $sql->execute([
     $veiculo,
     $modelo,
     $placa,
-    $tipo  // <-- AGORA RECEBE O VALOR CORRETO
+    $tipo 
 ]);
 
 header("Location: ../login.php?registrado=1");

@@ -59,3 +59,17 @@ CREATE TABLE IF NOT EXISTS produtos (
   ativo TINYINT(1) DEFAULT 1,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Tabela de pedidos 
+CREATE TABLE IF NOT EXISTS pedido_itens (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  pedido_id INT NOT NULL,
+  produto_id INT NOT NULL,
+  valor DECIMAL(10,2) NOT NULL,
+  CONSTRAINT fk_pedido_itens_pedido
+    FOREIGN KEY (pedido_id) REFERENCES pedidos(id)
+    ON DELETE CASCADE,
+  CONSTRAINT fk_pedido_itens_produto
+    FOREIGN KEY (produto_id) REFERENCES produtos(id)
+    ON DELETE CASCADE
+);

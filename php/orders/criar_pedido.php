@@ -57,9 +57,7 @@ try {
     // Transação para garantir consistência
     $pdo->beginTransaction();
 
-    // IMPORTANTE: usar os NOMES que existem na sua tabela pedidos
-    // (id, cliente_id, entregador_id, cep, endereco_entrega, numero,
-    //  complemento, token_verificacao, status, created_at)
+
     $sql = $pdo->prepare("
         INSERT INTO pedidos 
         (cliente_id, cep, endereco_entrega, numero, complemento, token_verificacao, status)
@@ -78,9 +76,6 @@ try {
 
     $pedido_id = $pdo->lastInsertId();
 
-    // Agora, inserir os itens do pedido
-    // ATENÇÃO: precisa existir a tabela 'pedido_itens'
-    // com pelo menos: id, pedido_id, produto_id, valor
     $stmtItem = $pdo->prepare("
         INSERT INTO pedido_itens (pedido_id, produto_id, valor)
         VALUES (?,?,?)
@@ -110,7 +105,7 @@ try {
     // Loga no servidor
     error_log("ERRO SQL PEDIDO: " . $e->getMessage());
 
-    // Manda pro front o erro explícito pra gente enxergar
+    // Manda pro front o erro explícito
     echo json_encode([
         "ok"       => false,
         "mensagem" => "ERRO SQL PEDIDO: " . $e->getMessage()

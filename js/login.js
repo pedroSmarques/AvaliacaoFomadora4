@@ -1,4 +1,4 @@
-// js/login.js
+
 // Validação simples de campos vazios no login
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // 👉 AQUI NÃO TEM MAIS CONTADOR DE TENTATIVAS
-    // quem decide se está certo ou errado agora é só o PHP (valida_login.php)
+
   });
 });

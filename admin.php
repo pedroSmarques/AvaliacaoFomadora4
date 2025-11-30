@@ -1,5 +1,4 @@
 <?php
-// admin.php – painel do administrador
 
 session_start();
 

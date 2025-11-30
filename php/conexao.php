@@ -1,5 +1,4 @@
 <?php
-// php/conexao.php
 // Faz a conexão com o banco delivery_universitario usando PDO
 
 $DB_HOST = '127.0.0.1';
