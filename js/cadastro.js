@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".erro-campo").forEach(x => x.textContent = "");
     }
 
-    // 1️⃣ MOSTRAR CAMPOS DO ENTREGADOR
+    // 1️ MOSTRAR CAMPOS DO ENTREGADOR
     tipo.addEventListener("change", () => {
         if (tipo.value === "entregador") {
             camposEntregador.classList.remove("hidden");
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 2️⃣ CAMPOS PARA MOTO / CARRO
+    // 2️ CAMPOS PARA MOTO / CARRO
     veiculo.addEventListener("change", () => {
         if (veiculo.value === "moto" || veiculo.value === "carro") {
             camposVeiculoMotorizado.classList.remove("hidden");
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 3️⃣ MÁSCARA CPF
+    // 3️ MÁSCARA CPF
     cpf.addEventListener("input", () => {
         let v = cpf.value.replace(/\D/g, "");
         v = v.replace(/(\d{3})(\d)/, "$1.$2");
@@ -56,14 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
         cpf.value = v;
     });
 
-    // 4️⃣ MÁSCARA CEP
+    // 4️ MÁSCARA CEP
     cep.addEventListener("input", () => {
         let v = cep.value.replace(/\D/g, "");
         if (v.length > 5) v = v.replace(/(\d{5})(\d)/, "$1-$2");
         cep.value = v;
     });
 
-    // 5️⃣ API VIA CEP
+    // 5️ API VIA CEP
     cep.addEventListener("blur", async () => {
         const apenasNum = cep.value.replace(/\D/g, "");
 
@@ -80,12 +80,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 6️⃣ MÁSCARA PLACA MERCOSUL
+    // 6️ MÁSCARA PLACA MERCOSUL
     placa.addEventListener("input", () => {
         placa.value = placa.value.toUpperCase().replace(/[^A-Z0-9]/g, "");
     });
 
-    // 7️⃣ VALIDAÇÃO COMPLETA -------------------------
+    // 7️ VALIDAÇÃO COMPLETA -------------------------
     form.addEventListener("submit", (e) => {
 
         limparErros();
